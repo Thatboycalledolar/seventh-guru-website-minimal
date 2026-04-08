@@ -5,7 +5,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-white fixed w-full shadow-lg">
+    <nav className="bg-white fixed z-30 w-full">
       <div className="px-8 py-4 flex max-w-300 mx-auto justify-between items-center">
         
         {/* Logo */}
@@ -13,7 +13,7 @@ export default function Navbar() {
          w-auto" /></a>
 
         {/* Desktop Links */}
-        <div className="flex justify-center items-center text-(--text-color) gap-6">
+        <div className="flex justify-center items-center text-(--text-color) gap-8">
           <div className="hidden md:flex text-base gap-6 font-medium">
           <Link to="/" className="hover:text-(--primary-color)">Home</Link>
           <Link to="/Services" className="hover:text-(--primary-color)">Services</Link>
@@ -22,7 +22,7 @@ export default function Navbar() {
         </div>
         <div className="hidden md:flex">
           <Link to="/Apply">
-            <button className="text-white text-[14px] px-5 py-3 rounded-full bg-slate-700 hover:bg-(--primary-color) cursor-pointer"> Work with Us</button>
+            <button className="text-white text-[14px] px-4 py-2 rounded-full bg-(--text-color) hover:bg-(--primary-color) cursor-pointer"> Work with Us</button>
           </Link>
         </div>
         </div>

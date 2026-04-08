@@ -9,7 +9,17 @@ export default function FeatureCaseStudy() {
   return(
     <div className="flex flex-col items-center w-full max-w-300 py-16 gap-8 px-6 md:px-16">
       <Reveal duration={0.5} className="w-full">
-         <FeaturedCaseHeader text="Featured Case Study" />
+         
+          <div className="max-w-300 max-auto w-full py-8 flex flex-col items-start rounded-xl gap-4">
+          <Reveal duration={0.5}>
+            <h2 className="text-left w-full text-6xl md:text-8xl font-bold leading-14 md:leading-18 tracking-tighter text-(--text-color)">Featured <br />Case Studies</h2>
+          </Reveal>
+          <Reveal duration={0.7}>
+            <p className="text-sm md:text-lg font-body">See for yourself how and the kind of magic we make</p>
+          </Reveal>
+          
+        
+        </div>
       </Reveal>
 
       <div className="flex flex-col md:grid grid-cols-2 md:max-w-300 gap-10 w-full mb-8">

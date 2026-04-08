@@ -1,5 +1,4 @@
-import MainBtn from "./MainBtn"
-import { Link } from "react-router-dom";
+import SecondBtn from "./SecondBtn";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
@@ -10,7 +9,7 @@ export default function Footer() {
           <h3 className="text-3xl md:text-4xl max-w-160 font-bold leading-1.2 tracking-tighter">The Growth you envision for your brand needs structure</h3>
           <p className="text-sm font-body">Fill up our short application, let's see if we are a fit.</p>
         </div>
-        <MainBtn text="Apply to work with us" link="/Apply" />
+        <SecondBtn text="Apply to work with us" link="/Apply" />
       </div>
 
       <div className="mt-12 flex flex-col items-center gap-12 max-w-300 md:flex-row md:justify-between md:items-start w-full">

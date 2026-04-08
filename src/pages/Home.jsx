@@ -12,7 +12,7 @@ export default function Home() {
     
     <Hero />
     <Client2 />
-    <div className="h-0.5 rounded-full max-w-150 bg-[#333333] mt-4 mb-10 w-[70%]"></div>
+    <div className="h-0.5 rounded-full max-w-100 bg-[#333333] mt-4 mb-10 w-[50%]"></div>
     <Problem />
     <Solution />
     <FeaturedCaseStudy />
