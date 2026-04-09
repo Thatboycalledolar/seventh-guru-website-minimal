@@ -22,10 +22,10 @@ export default function ApplicationRecieved() {
 
             <div className="flex flex-col items-center gap-4 mb-36">
               <h3>Meanwhile</h3>
-              <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-col md:flex-row items-center gap-4">
                 <MainBtn text="View some Case Studies" link="/CaseStudy"/>
                 <Link to="/">
-                  <button className="bg-red-500 px-5 py-3 text-sm rounded-full text-white cursor-pointer hover:bg-red-700">Back to Homepage</button>
+                  <button className="bg-red-500 text-md md:text-lg font-normal px-6 md:px-8 py-3 rounded-full text-white cursor-pointer hover:bg-red-700">Back to Homepage</button>
                 </Link>
               </div>
           </div>
