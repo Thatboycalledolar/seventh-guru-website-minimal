@@ -7,7 +7,7 @@ export const caseStudies = [
     coverImg: "/olar/olar-cover.png",
     painPoint: "A new luxury leather fashion brand that needs brand positioning, clarity and a compelling yet luxurious African identity",
     risk: "Wrong or poor brand positioning inconsistent brand principles and elements wrong   messaging tone",
-    system: "After getting on a discovery call, we built a system around minimalism and a strong combination of colors to show luxury. Clean and bold typeface with pattern to maintain African originality and a subtle blend of alternating background for flexibility and versatility.",
+    system: "After getting on a discovery call, we built a system around minimalism and strong choice of colors to show luxury and origin. Clean and bold typeface with pattern to maintain African originality and a subtle blend of alternating background for flexibility and versatility.",
     images: {
       desktop: "/olar/olar-desktop.png",
       mobile: "/olar/olar-mobile.png"},

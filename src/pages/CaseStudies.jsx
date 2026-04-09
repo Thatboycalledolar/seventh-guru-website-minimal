@@ -10,56 +10,69 @@ export default function CaseStudies() {
   }
 
   return (
-    <div className="flex flex-col w-full max-w-6xl text-(--text-color) p-8 mt-24">
+    <div className="flex flex-col w-full text-(--text-color)">
       
       {/* Title */}
-      <div className="mb-6 flex items-center gap-6">
-        <img src={caseStudy.coverImg} alt={caseStudy.title} className="h-auto w-32 md:w-48 rounded-lg mb-6" />
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">
-        {caseStudy.title}
-        </h1>
-        <p className="text-(--text-color) font-normal text-sm md:text-lg mb-12 bg-(--background-color) p-2 px-4 rounded inline-block">
-          {caseStudy.category}
-        </p>
+      <div className="bg-gray-100 w-full pt-36 md:pt-44 pb-10 md:pb-14">
+
+        <div className="mb-6 flex flex-col px-8 md:flex-row items-center gap-6 max-w-300 mx-auto">
+          <img src={caseStudy.coverImg} alt={caseStudy.title} className="h-auto w-48 rounded-lg mb-3 md:mb-6" />
+          <div>
+          <h1 className="text-4xl md:text-5xl text-center md:text-left font-bold mb-2">
+          {caseStudy.title}
+          </h1>
+          <p className="text-(--text-color) font-normal text-xs md:text-base bg-gray-200 font-body p-2 px-4 rounded inline-block">
+            {caseStudy.category}
+          </p>
+          </div> 
         </div>
-        
       </div>
       
 
-      {/* painpoint */}
-      <p className=" mb-12 md:text-lg">
-        <span className="font-bold">Pain Point:</span> {caseStudy.painPoint}
-      </p>
+      {/* documentaion div */}
+      <div className="max-w-300 mx-auto px-8 mt-10 md:mt-20 mb-20">
+        <div className="flex flex-col md:grid grid-cols-2 gap-10 mb-10 md:mb-20">
 
-      {/* risk */}
-      <p className=" mb-12 md:text-lg">
-        <span className="font-bold">Risk:</span> {caseStudy.risk}
-      </p>
+          {/* painpoint */}
+          <div className=" flex flex-col bg-gray-100 p-8 md:p-10 rounded-lg">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Pain Point</h3>
+            <p className="text-sm opacity-70 font-body md:text-base">{caseStudy.painPoint}</p>
+          </div>
+          
+          {/* risk */}
+          <div className=" flex flex-col bg-gray-100 p-8 md:p-10 rounded-lg">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Risk</h3>
+            <p className="text-sm opacity-70 font-body md:text-base">{caseStudy.risk}</p>
+          </div>
+          
+          {/* system */}
+          <div className="flex flex-col bg-gray-100 p-8 md:p-10 rounded-lg col-span-2">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">System</h3>
+            <p className="text-sm opacity-70 font-body md:text-base">{caseStudy.system}</p>
+          </div>
+        </div>
+          
 
-      {/* system */}
-      <p className=" mb-12 md:text-lg">
-        <span className="font-bold">System:</span> {caseStudy.system}
-      </p>
+          {/* Responsive Case Study Image */}
+          <picture>
 
-      {/* Responsive Case Study Image */}
-      <picture>
+            {/* Desktop Image */}
+            <source
+              media="(min-width: 768px)"
+              srcSet={caseStudy.images.desktop}
+            />
 
-        {/* Desktop Image */}
-        <source
-          media="(min-width: 768px)"
-          srcSet={caseStudy.images.desktop}
-        />
+            {/* Mobile Image */}
+            <img
+              src={caseStudy.images.mobile}
+              alt={caseStudy.title}
+              loading="lazy"
+              className="w-full rounded-lg"
+            />
 
-        {/* Mobile Image */}
-        <img
-          src={caseStudy.images.mobile}
-          alt={caseStudy.title}
-          loading="lazy"
-          className="w-full rounded-lg"
-        />
-
-      </picture>
+          </picture>
+      </div>
+      
     </div>
   )
 }
