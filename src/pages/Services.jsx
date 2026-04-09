@@ -17,11 +17,11 @@ export default function Services() {
       <ServicePageHead />
 
       {/* service cards div */}
-      <div className="flex flex-col gap-20 max-w-300 px-8 md:px-4 md:grid grid-cols-2 items-start md:mt-20 md:mb-20">
+      <div className="flex flex-col gap-10 max-w-300 px-8 md:px-4 md:grid grid-cols-2 items-start md:mt-20 md:mb-20">
 
         {/* card one */}
         <Reveal className="md:col-span-2">
-        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-gray-200 px-8 py-12 md:p-24 rounded-lg md:rounded-2xl ">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-gray-200 px-8 py-12 md:py-16 md:px-12 rounded-lg md:rounded-2xl ">
           {/* <Reveal delay={0}>
             <h3 className="text-start md:text-end text-[200px] md:text-[250px] font-bold italic text-amber-300">01</h3>
           </Reveal> */}
@@ -31,7 +31,7 @@ export default function Services() {
                <ServiceDetails header="Brand Foundation" body="For companies that need clarity, positioning, and credibility. We create stunning visuals that effectively depict the brand and it's core values to represent it both online and prints."/>
             </Reveal>
            
-            <div className="flex flex-col">
+            <div className="flex flex-col max-w-[80%]">
               <Reveal delay={0.1}>
                  <ServiceDropDown 
                   color="hover:bg-gray-900/60 hover:text-white"
@@ -97,10 +97,10 @@ export default function Services() {
 
         {/* card two */}
         <Reveal>
-        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-blue-100 px-8 py-12 md:p-16 rounded-lg md:rounded-2xl">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-blue-100 px-8 py-12 md:py-16 md:px-12 rounded-lg md:rounded-2xl">
           <div className="flex flex-col gap-8">
             <Reveal delay={0.2}>
-               <ServiceDetails header="Digital Infrastructure" body="Your website is your 24/7 salesman and brand representative, Creating a great user experience for your website visitors is important to retain trust and choice of your brand."/>
+               <ServiceDetails header="Digital Infrastructure" body="Your website is your 24/7 salesman, Creating a great user experience for your website visitors is important to retain trust and choice of your brand."/>
             </Reveal>
            
             <div className="flex flex-col">
@@ -155,7 +155,7 @@ export default function Services() {
 
          {/* card three */}
          <Reveal delay={0}>
-        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-purple-100 px-8 py-12 md:p-16 rounded-lg md:rounded-2xl">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-purple-100 px-8 py-12 md:py-16 md:px-12 rounded-lg md:rounded-2xl">
          
           
           <div className="flex flex-col gap-8">
