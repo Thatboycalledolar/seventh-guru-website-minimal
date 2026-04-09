@@ -73,7 +73,7 @@ export default function About() {
             <div className="flex flex-col bg-purple-100 p-6 md:p-10 rounded-lg">
               <BookOpenCheck size={40} color="#7435a5" />
               <h3 className="font-bold text-xl md:text-2xl mb-2 mt-2 text-purple-900/80">Adaptability</h3>
-              <p className="font-body text-sm md:text-base">To ensure that our clients remain releveant and competitive in a a world that is constantly evolving and changing trends, we have the ability to adapt fast to the trends in our clients industry. We pivot like we see the future.</p>
+              <p className="font-body text-sm md:text-base">To ensure that our clients remain releveant and competitive in a world that is constantly evolving and changing trends, we have the ability to adapt fast to the trends in our clients industry. We pivot like we see the future.</p>
             </div>
           </div>
         </div>
