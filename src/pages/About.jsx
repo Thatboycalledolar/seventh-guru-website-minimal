@@ -1,5 +1,8 @@
 import Reveal from "../components/Reveal";
 import AboutPageHead from "../components/AboutPageHeader";
+import { Palette } from "lucide-react";
+import { BookOpenCheck } from "lucide-react";
+import { BadgeCheck } from "lucide-react";
 
 export default function About() {
   return(
@@ -7,16 +10,13 @@ export default function About() {
         <AboutPageHead />
       
       {/* main div for the about content */}
-      <div className="flex flex-col max-w-300 mx-auto px-8 pt-16">
+      <div className="flex flex-col md:grid grid-cols-2 gap-4 md:gap-10 max-w-350 mx-auto px-8 pt-16">
 
       <Reveal>
          {/* div for each content */}
-        <div className="flex flex-col text-(--text-color) w-full mb-16 ">
-          <div className="flex flex-col mb-4 ">
-            <h2 className="text-3xl font-bold ">What Drives Us</h2>
-            <p className="text-base">(Mission and Vision)</p>
-          </div>
-          <div className="bg-(--background-color) p-8 text-sm md:text-base rounded-lg flex flex-col gap-2 font-body">
+        <div className="flex flex-col text-(--text-color) w-full mb-16 bg-gray-100 p-8 md:p-12 rounded-lg border-3 border-gray-200">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-(--primary-color)">Our Mission & Vision</h2>
+          <div className="text-sm md:text-base rounded-lg flex flex-col gap-2 font-body">
              <p>
               Our Mission is to build brand systems that create clarity,       command authority, and unlock scalable growth for ambitious   companies worldwide. We exist to transform fragmented ideas and visuals into cohesive identities that bring about trust and guarantees long term growth and scalability.
             </p>
@@ -29,38 +29,20 @@ export default function About() {
 
        
 
-      <Reveal>
-        <div className="flex flex-col text-(--text-color) w-full mb-16">
-          <div className="flex flex-col gap-1 mb-4 ">
-            <h2 className="text-3xl font-bold ">Why Strategy/Infrastructure matters</h2>
-          </div>
-          <div className="bg-(--background-color) p-8 text-sm md:text-base rounded-lg flex flex-col gap-2 font-body">
-            <p>
-              Strategy separates activity from direction. Without strategy, brands make decisions based on trends, emotion, or short-term pressure which results in inconsistencies like unclear positioning, and fragmented visual identity. This makes the brand’s growth become unstable because the foundation was never properly structured. 
-            </p>
-            <p>
-              Strategy creates alignment. It defines who you are, who you serve, how you are different, and how every expression of the brand supports long-term objectives.it coordinates design, marketing, products, and customer experience.
-            </p>
-          </div>
-            
-
-        </div>
-      </Reveal>
-
 
       <Reveal>
-        <div className="flex flex-col text-(--text-color) w-full mb-16">
-          <div className="flex flex-col gap-1 mb-4 ">
-            <h2 className="text-3xl font-bold ">Our Beliefs</h2>
-          </div>
-          <div className="bg-(--background-color) p-8 text-sm md:text-base rounded-lg gap-2 flex flex-col font-body">
+        <div className="flex flex-col text-(--text-color) w-full mb-16 bg-gray-100 p-8 md:p-12 rounded-lg border-3 border-gray-200">
+          
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-(--primary-color)">Our Beliefs</h2>
+          
+          <div className="text-sm md:text-base rounded-lg gap-2 flex flex-col font-body">
             <ul className="px-4 marker:text-(--primary-color)">
-              <li className="list-disc ">Design without <span className="font-bold">strategy</span> causes chaos and unalignment.</li>
-              <li className="list-disc">Strategy without <span className="font-bold">execution</span> lives on paper and brings no real results.</li>
-              <li className="list-disc"><span className="font-bold">Strategic patterns</span> beat creative chaos every time.</li>
+              <li className="list-disc ">Design without strategy causes chaos and unalignment.</li>
+              <li className="list-disc">Strategy without execution lives on paper and brings no real results.</li>
+              <li className="list-disc">Strategic patterns beat creative chaos every time.</li>
             </ul>
-            <p>
-              We exist to combine all to create the magic your brand needs.
+            <p className="font-semibold">
+              We combine all to create the magic your brand needs.
             </p>
           </div>
         </div>
@@ -68,29 +50,30 @@ export default function About() {
 
 
 
-      <Reveal>
-        <div className="flex flex-col text-(--text-color) w-full mb-16">
-          <div className="flex flex-col gap-1 mb-4 ">
-            <h2 className="text-3xl font-bold ">Our Core Values</h2>
-          </div>
-          <div className="bg-(--background-color) p-8 md:p-12 text-sm md:text-base rounded-lg gap-8 flex flex-col font-body">
-            <div className="flex flex-col">
-              <h3 className="font-bold text-xl mb-2">Professionalism</h3>
-              <p>Creativity is often considered chaotic, we operate with laid out plans and structures to ensure smooth delivery, effective handling and timely response. We priortize effectiveness over fancy.</p>
+      <Reveal className="col-span-2">
+        <div className="flex flex-col text-(--text-color) w-full mb-16 bg-gray-100 p-8 md:p-12 rounded-lg border-3 border-gray-200">
+          
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-(--primary-color)">Our Core Values</h2>
+          
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col bg-gray-200 p-6 md:p-10 rounded-lg">
+              <BadgeCheck size={40} color="#333333" />
+              <h3 className="font-bold text-xl md:text-2xl mb-2 mt-2 text-(--text-color)">Professionalism</h3>
+              <p className="font-body text-sm md:text-base">Creativity is often considered chaotic, we operate with laid out plans and structures to ensure smooth delivery, effective handling and timely response. We priortize effectiveness over fancy.</p>
             </div>
 
-            <div className="w-[50%] h-px bg-gray-800"></div>
 
-            <div className="flex flex-col">
-              <h3 className="font-bold text-xl mb-2">Creativity</h3>
-              <p>Strucure sometimes look boring, but we make your brand as stylish as possible. Unleashing creativity in your projects at it's best without compromising on structure in the slightest.</p>
+            <div className="flex flex-col bg-blue-100 p-6 md:p-10 rounded-lg">
+              <Palette size={40} color="#0059AA" />
+              <h3 className="font-bold text-xl md:text-2xl mb-2 mt-2 text-(--primary-color)">Creativity</h3>
+              <p className="font-body text-sm md:text-base">Strucure sometimes look boring, but we make your brand as stylish as possible. Unleashing creativity in your projects at it's best without compromising on structure in the slightest.</p>
             </div>
 
-            <div className="w-[50%] h-px bg-gray-800"></div>
             
-            <div className="flex flex-col">
-              <h3 className="font-bold text-xl mb-2">Adaptability</h3>
-              <p>To ensure that our clients remain releveant and competitive in a a world that is constantly evolving and changing trends, we have the ability to adapt fast to the trends in our clients industry. We pivot like we see the future.</p>
+            <div className="flex flex-col bg-purple-100 p-6 md:p-10 rounded-lg">
+              <BookOpenCheck size={40} color="#7435a5" />
+              <h3 className="font-bold text-xl md:text-2xl mb-2 mt-2 text-purple-900/80">Adaptability</h3>
+              <p className="font-body text-sm md:text-base">To ensure that our clients remain releveant and competitive in a a world that is constantly evolving and changing trends, we have the ability to adapt fast to the trends in our clients industry. We pivot like we see the future.</p>
             </div>
           </div>
         </div>
