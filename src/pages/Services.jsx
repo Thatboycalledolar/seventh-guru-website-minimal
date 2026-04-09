@@ -17,22 +17,25 @@ export default function Services() {
       <ServicePageHead />
 
       {/* service cards div */}
-      <div className="flex flex-col max-w-300 px-8 md:px-16 items-start md:items-center md:mt-30">
+      <div className="flex flex-col gap-20 max-w-300 px-8 md:px-4 md:grid grid-cols-2 items-start md:items-center md:mt-20 md:mb-20">
 
         {/* card one */}
-        <div className="flex flex-col md:flex-row gap-0 md:gap-30">
-          <Reveal delay={0}>
+        <Reveal className="md:col-span-2">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-gray-200 px-8 py-12 md:p-24 rounded-lg md:rounded-2xl ">
+          {/* <Reveal delay={0}>
             <h3 className="text-start md:text-end text-[200px] md:text-[250px] font-bold italic text-amber-300">01</h3>
-          </Reveal>
+          </Reveal> */}
           
           <div className="flex flex-col gap-8">
-            <Reveal delay={0.2}>
+            <Reveal delay={0}>
                <ServiceDetails header="Brand Foundation" body="For companies that need clarity, positioning, and credibility. We create stunning visuals that effectively depict the brand and it's core values to represent it both online and prints."/>
             </Reveal>
            
             <div className="flex flex-col">
               <Reveal delay={0.1}>
                  <ServiceDropDown 
+                  color="hover:bg-gray-900/60 hover:text-white"
+                  marker="marker:text-gray-900/60"
                   id="brand-foundation-1"
                   active={active}
                   setActive={setActive}
@@ -45,6 +48,8 @@ export default function Services() {
               </Reveal>
               <Reveal delay={0.2}>
                 <ServiceDropDown 
+                  color="hover:bg-gray-900/60 hover:text-white"
+                  marker="marker:text-gray-900/60"
                   id="brand-foundation-2"
                   active={active}
                   setActive={setActive}
@@ -57,6 +62,8 @@ export default function Services() {
               </Reveal>
               <Reveal delay={0.3}>
                 <ServiceDropDown 
+                  color="hover:bg-gray-900/60 hover:text-white"
+                  marker="marker:text-gray-900/60"
                   id="brand-foundation-3"
                   active={active}
                   setActive={setActive}
@@ -69,6 +76,8 @@ export default function Services() {
               </Reveal>
               <Reveal delay={0.4}>
                 <ServiceDropDown 
+                  color="hover:bg-gray-900/60 hover:text-white"
+                  marker="marker:text-gray-900/60"
                   id="brand-foundation-4"
                   active={active}
                   setActive={setActive}
@@ -83,15 +92,12 @@ export default function Services() {
             
           </div>
         </div>
+        </Reveal>
 
-        <div className="h-0.5 w-[80%] md:w-[50%] bg-gray-500 mt-20 mb-5 md:mb-40 md:mt-30"></div>
 
         {/* card two */}
-        <div className="flex flex-col md:flex-row gap-0 md:gap-30">
-          <Reveal delay={0}>
-            <h3 className="text-start md:text-end text-[200px] md:text-[250px] font-bold italic text-blue-300">02</h3>
-          </Reveal>
-          
+        <Reveal>
+        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-blue-100 px-8 py-12 md:p-16 md:h-135 rounded-lg md:rounded-2xl">
           <div className="flex flex-col gap-8">
             <Reveal delay={0.2}>
                <ServiceDetails header="Digital Infrastructure" body="Your website is your 24/7 salesman and brand representative, Creating a great user experience for your website visitors is important to retain trust and choice of your brand."/>
@@ -100,6 +106,8 @@ export default function Services() {
             <div className="flex flex-col">
               <Reveal delay={0.1}>
                  <ServiceDropDown 
+                  color="hover:bg-blue-900/60 hover:text-white"
+                  marker="marker:text-blue-900/60"
                   id="digital-1"
                   active={active}
                   setActive={setActive}
@@ -112,6 +120,8 @@ export default function Services() {
               </Reveal>
               <Reveal delay={0.2}>
                 <ServiceDropDown 
+                  color="hover:bg-blue-900/60 hover:text-white"
+                  marker="marker:text-blue-900/60"
                   id="digital-2"
                   active={active}
                   setActive={setActive}
@@ -124,6 +134,8 @@ export default function Services() {
               </Reveal>
               <Reveal delay={0.3}>
                 <ServiceDropDown 
+                  color="hover:bg-blue-900/60 hover:text-white"
+                  marker="marker:text-blue-900/60"
                   id="digital-3"
                   active={active}
                   setActive={setActive}
@@ -138,14 +150,13 @@ export default function Services() {
             
           </div>
         </div>
+        </Reveal>
 
-        <div className="h-0.5 w-[80%] md:w-[50%] bg-gray-500 mt-20 mb-5 md:mb-40 md:mt-30"></div>
 
          {/* card three */}
-        <div className="flex flex-col md:flex-row gap-0 md:gap-30">
-          <Reveal delay={0}>
-            <h3 className="text-start md:text-end text-[200px] md:text-[250px] font-bold italic text-purple-300">03</h3>
-          </Reveal>
+         <Reveal delay={0}>
+        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-purple-100 px-8 py-12 md:p-16 md:h-135 rounded-lg md:rounded-2xl">
+         
           
           <div className="flex flex-col gap-8">
             <Reveal delay={0.2}>
@@ -155,6 +166,8 @@ export default function Services() {
             <div className="flex flex-col">
               <Reveal delay={0.1}>
                  <ServiceDropDown 
+                  color="hover:bg-purple-900/60 hover:text-white"
+                  marker="marker:text-purple-900/60"
                   id="retainer-1"
                   active={active}
                   setActive={setActive}
@@ -167,6 +180,8 @@ export default function Services() {
               </Reveal>
               <Reveal delay={0.2}>
                 <ServiceDropDown 
+                  color="hover:bg-purple-900/60 hover:text-white"
+                  marker="marker:text-purple-900/60"
                   id="retainer-2"
                   active={active}
                   setActive={setActive}
@@ -181,6 +196,7 @@ export default function Services() {
             
           </div>
         </div>
+         </Reveal>
 
       </div>
       

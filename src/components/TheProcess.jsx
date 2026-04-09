@@ -3,9 +3,9 @@ import Reveal from "./Reveal";
 
 export default function TheProcess() {
   return(
-    <div className="flex flex-col items-center py-8  gap-12 max-w-300">
+    <div className="flex flex-col items-start py-8 gap-12 max-w-300">
       <Reveal>
-         <div className="flex flex-col items-start px-8 text-start p-8 rounded-md text-white max-w-300 w-full">
+         <div className="flex flex-col items-start text-start p-8 rounded-md text-white w-full">
           <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-tighter">The Process</h2>
           <p className="text-sm md:text-lg font-body opacity-60 ">Systems build brands, we also have structured processes we follow to create the magic your brand needs</p>
         </div>
