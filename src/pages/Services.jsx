@@ -31,7 +31,7 @@ export default function Services() {
                <ServiceDetails header="Brand Foundation" body="For companies that need clarity, positioning, and credibility. We create stunning visuals that effectively depict the brand and it's core values to represent it both online and prints."/>
             </Reveal>
            
-            <div className="flex flex-col max-w-[80%]">
+            <div className="flex flex-col md:max-w-[80%]">
               <Reveal delay={0.1}>
                  <ServiceDropDown 
                   color="hover:bg-gray-900/60 hover:text-white"
