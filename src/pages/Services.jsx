@@ -17,7 +17,7 @@ export default function Services() {
       <ServicePageHead />
 
       {/* service cards div */}
-      <div className="flex flex-col gap-10 max-w-300 px-8 md:px-4 md:grid grid-cols-2 items-start md:mt-20 md:mb-20">
+      <div className="flex flex-col gap-10 max-w-300 px-8 h-full md:px-4 md:grid grid-cols-2 items-start md:mt-20 md:mb-20">
 
         {/* card one */}
         <Reveal className="md:col-span-2">
@@ -97,7 +97,7 @@ export default function Services() {
 
         {/* card two */}
         <Reveal>
-        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-blue-100 px-8 py-12 md:py-16 md:px-12 rounded-lg md:rounded-2xl">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-30 h-full bg-blue-100 px-8 py-12 md:py-16 md:px-12 rounded-lg md:rounded-2xl">
           <div className="flex flex-col gap-8">
             <Reveal delay={0.2}>
                <ServiceDetails header="Digital Infrastructure" body="Your website is your 24/7 salesman, Creating a great user experience for your website visitors is important to retain trust and choice of your brand."/>
@@ -154,8 +154,8 @@ export default function Services() {
 
 
          {/* card three */}
-         <Reveal delay={0}>
-        <div className="flex flex-col md:flex-row gap-0 md:gap-30 bg-purple-100 px-8 py-12 md:py-16 md:px-12 rounded-lg md:rounded-2xl">
+         <Reveal delay={0} className="h-full">
+        <div className="flex flex-col md:flex-row gap-0 md:gap-30 h-full bg-purple-100 px-8 py-12 md:py-16 md:px-12 rounded-lg md:rounded-2xl">
          
           
           <div className="flex flex-col gap-8">

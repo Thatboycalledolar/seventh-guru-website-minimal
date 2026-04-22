@@ -71,6 +71,13 @@ export default function CaseStudies() {
             />
 
           </picture>
+
+          {/* website(optional) */}
+          <div className={`${!caseStudy.website ? "hidden" : "block"} mt-10 gap-2
+           flex flex-col`}>
+            <h3 className="italic">{caseStudy.website.type}</h3>
+            <a href={caseStudy.website.link} target="blank" className="hover:text-white hover:bg-(--primary-color) bg-gray-100 px-4 py-2 rounded-lg text-base md:text-lg md:font-bold w-fit">{caseStudy.website.label}</a>
+          </div>
       </div>
       
     </div>

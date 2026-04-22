@@ -14,7 +14,7 @@ export default function About() {
 
       <Reveal>
          {/* div for each content */}
-        <div className="flex flex-col text-(--text-color) w-full mb-16 bg-gray-100 p-8 md:p-12 rounded-lg border-3 border-gray-200">
+        <div className="flex flex-col text-(--text-color) w-full h-full mb-16 bg-gray-100 p-8 md:p-12 rounded-lg border-3 border-gray-200">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-(--primary-color)">Our Mission & Vision</h2>
           <div className="text-sm md:text-base rounded-lg flex flex-col gap-2 font-body">
              <p>
@@ -31,7 +31,7 @@ export default function About() {
 
 
       <Reveal>
-        <div className="flex flex-col text-(--text-color) w-full mb-16 bg-gray-100 p-8 md:p-12 rounded-lg border-3 border-gray-200">
+        <div className="flex flex-col text-(--text-color) w-full h-full mb-16 bg-gray-100 p-8 md:p-12 rounded-lg border-3 border-gray-200">
           
             <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-(--primary-color)">Our Beliefs</h2>
           

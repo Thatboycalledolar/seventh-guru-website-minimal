@@ -29,11 +29,9 @@ export default function Review() {
       <div className="flex flex-col md:flex-row items-center md:items-start justify-start gap-8">
          <Reveal duration={0.7}>
            <div className="flex flex-col justify-start items-center md:items-start">
-          <h3 className="text-2xl text-center md:text-left md:text-3xl h-40 font-body text-(--text-color)/80 font-normal tracking-tight mb-6">{rev.message}</h3>
-          <div className="flex flex-col items-center md:items-start">
-            <p className="text-lg md:text-2xl text-(--primary-color) font-bold">{rev.name}</p>
-            <p className="text-sm md:text-md text-(--text-color) font-normal">{rev.position}</p>
-          </div>
+          <h3 className="text-xl text-center md:text-left md:text-3xl font-body text-(--text-color) font-normal tracking-tight mb-6">{rev.message}</h3>
+          <p className="text-base md:text-lg text-(--primary-color) font-normal">{rev.position}</p>
+          
         </div>
         </Reveal>
        

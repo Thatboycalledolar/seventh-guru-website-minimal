@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function ImageFade() {
   const images = [
-    "/olar/olar-cover.png",
-    "/olar/olar-logo1.png",
-    "/olar/olar-pres1.png",
-    "/olar/olar-pres2.png",
-    "/olar/olar-flyer1.png",
+    "/fade/fade-1.png",
+    "/fade/fade-2.png",
+    "/fade/fade-3.png",
+    "/fade/fade-4.png",
+    "/fade/fade-5.png",
+    "/fade/fade-6.png"
     
   ];
 
