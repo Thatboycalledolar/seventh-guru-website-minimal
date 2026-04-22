@@ -11,7 +11,7 @@ export default function Contact() {
 
       <div className="w-full bg-(--background-color) py-12 px-12 flex flex-col gap-16 rounded-lg md:grid grid-cols-2">
         <ContactCard icon={<Mail color="white"/>} text="Seventhguru@gmail.com" href="mailto:seventhguru@gmail.com" />
-        <ContactCard icon={<Phone color="white" />} text="+23412345678" href="tel:+23412345678"/>
+        <ContactCard icon={<Phone color="white" />} text="+2349017251942" href="tel:+2349017251942"/>
         <ContactCard icon={<Globe color="white" />} text="www.seventhguru.com" href="https://www.seventhguru.com" />
         <ContactCard icon={<InstagramIcon color="white" />} text="seventh_guru" href="https://www.instagram.com/seventh_guru/"/>
       </div>
