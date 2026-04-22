@@ -1,7 +1,6 @@
  import MainBtn from "../components/MainBtn";
  import Reveal from "./Reveal";
  import ImageFade from "./ImageFade";
- import Stats from "./Stats";
  
  export default function Hero() {
   return(
