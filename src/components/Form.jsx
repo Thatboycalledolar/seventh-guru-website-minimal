@@ -21,6 +21,7 @@ export default function Form() {
     company: "",
     website: "",
     service: "",
+    location: "",
     budget: "",
     timeline: "",
     message: ""
@@ -43,10 +44,14 @@ export default function Form() {
     }
 
     if (step === 4) {
+      return formData.location
+    }
+    
+    if (step === 5) {
       return formData.budget
     }
 
-    if (step === 5) {
+    if (step === 6) {
       return formData.timeline
     }
 
@@ -66,6 +71,25 @@ export default function Form() {
     setError("");
     setStep(step - 1);
   }
+
+  const nigeriaBudgets = [
+  "₦100k - ₦500k",
+  "₦550k - ₦1M",
+  "₦1M - ₦3M",
+  "₦3M+"
+  ];
+
+const internationalBudgets = [
+  "$500 - $1,000",
+  "$1,500 - $3,500",
+  "$4,000 - $8,000",
+  "$8,000+"
+  ];
+
+const budgetOptions =
+  formData.location === "Nigeria"
+    ? nigeriaBudgets
+    : internationalBudgets;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -94,7 +118,7 @@ export default function Form() {
       {/* Progress indicator */}
       <div className="flex justify-between mb-10 text-sm">
 
-        {[1,2,3,4,5,6].map((num) => (
+        {[1,2,3,4,5,6,7].map((num) => (
           <div
             key={num}
             className={`flex-1 h-1 mx-1 rounded-full ${
@@ -118,6 +142,7 @@ export default function Form() {
         <input type="hidden" name="company" value={formData.company} />
         <input type="hidden" name="website" value={formData.website} />
         <input type="hidden" name="service" value={formData.service} />
+        <input type="hidden" name="location" value={formData.location} />
         <input type="hidden" name="budget" value={formData.budget} />
         <input type="hidden" name="timeline" value={formData.timeline} />
         <input type="hidden" name="message" value={formData.message} />
@@ -316,16 +341,64 @@ export default function Form() {
 
           {/* step 4 header */}
             <h1 className="text-3xl font-bold text-left mb-4 text-(--text-color)">
-              What's this service worth to you
+              Where is your Business Located
             </h1>
 
              <div className="flex flex-col gap-4 mb-8">
               {[
-                "$500 - $1,000",
-                "$1,000 - $3,000",
-                "$3,000 - $7,000",
-                "$8,000+",
-              ].map((budget) => (
+                "Nigeria",
+                "Other Countries"
+              ].map((location) => (
+
+                <button
+                  key={location}
+                  type="button"
+                  onClick={() => {
+                    setFormData({...formData, location})
+                  }}
+                  className={`bg-(--background-color) px-4 py-2 rounded-lg text-left transition ${formData.location === location ? "bg-(--primary-color) text-white" : "bg-(--background-color) hover:bg-(--primary-color) hover:text-white"}`}
+                >
+                 <p className="text-lg font-bold">{location}</p>
+                </button>
+              ))}
+             </div>
+          
+
+            <div className="flex justify-between">
+              <button
+                type="button"
+                onClick={prevStep}
+                className="border py-3 px-6 rounded-md flex gap-2 cursor-pointer"
+              >
+                <ArrowLeft width={18} />
+                Back
+              </button>
+
+              <button
+                type="button"
+                onClick={nextStep}
+                className="bg-(--primary-color) text-white py-3 px-6 rounded-md flex gap-2 cursor-pointer"
+              >
+                Next
+                <ArrowRight width={18} />
+              </button>
+            </div>
+          </>
+        )}
+      
+      
+      
+        {/* STEP 5 */}
+        {step === 5 && (
+          <>
+
+          {/* step 4 header */}
+            <h1 className="text-3xl font-bold text-left mb-4 text-(--text-color)">
+              What's your budget for this Service
+            </h1>
+
+             <div className="flex flex-col gap-4 mb-8">
+              {budgetOptions.map((budget) => (
 
                 <button
                   key={budget}
@@ -366,12 +439,12 @@ export default function Form() {
 
 
         {/* STEP 5 */}
-        {step === 5 && (
+        {step === 6 && (
           <>
 
           {/* step 5 header */}
             <h1 className="text-3xl font-bold text-left mb-4 text-(--text-color)">
-              What's your preffered delivery duration
+              What's your preferred delivery duration
             </h1>
 
              <div className="flex flex-col gap-4 mb-8">
@@ -420,7 +493,7 @@ export default function Form() {
         )}
 
         {/* STEP 6 */}
-        {step === 6 && (
+        {step === 7 && (
           <>
 
           <h1 className="text-3xl font-bold text-left text-(--text-color)">
