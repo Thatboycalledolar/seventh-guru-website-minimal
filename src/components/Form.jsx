@@ -59,10 +59,22 @@ export default function Form() {
   }
 
   function nextStep() {
+    // general validation step
     if (!validateStep()) {
       setError("Please complete required fields");
       return;
     }
+
+    // Email step validation
+    if (step === 1) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(formData.email.trim())) {
+        setError("Please enter a valid email address");
+        return;
+      }
+    }
+
     setError("");
     setStep(step + 1);
   }
@@ -103,13 +115,27 @@ const budgetOptions =
     )
     .then(
       () => {
-        navigate("/Application-recieved")
+        emailjs
+        .sendForm(
+          "service_mavzenl",
+          "template_h6bhuom",
+          formRef.current,
+          "vSIVmJ3pvFzduW6Zp"
+    )
+    .then(() => {
+            navigate("/Application-recieved");
+          })
+          .catch((error) => {
+            console.log("Auto-reply failed:", error.text);
+            // still navigate even if auto-reply fails
+            navigate("/Application-recieved");
+          });
       },
       (error) => {
         console.log(error.text);
         alert("Something went wrong, please try again later.");
       }
-    )
+    );     
   }
 
   return (
